@@ -1,0 +1,24 @@
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem;
+}
+
+.selects {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+}
+.IconsGridProduct{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 22px;
+    color: #5e5e5e;
+}
+
+.IconsGridProduct div:hover{
+    color: #004299;
+    cursor: pointer;
+}

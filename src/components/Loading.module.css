@@ -1,0 +1,6 @@
+.boxLoading{
+    width: 100%;
+    position:fixed;
+    top: 0;
+    margin-bottom: 2rem;
+}

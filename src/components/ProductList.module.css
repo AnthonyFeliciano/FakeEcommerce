@@ -1,0 +1,10 @@
+.ProductListContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    gap: 12px;
+    margin: 0 2.5rem;
+    
+}

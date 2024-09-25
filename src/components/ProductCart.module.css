@@ -1,0 +1,29 @@
+.ProductCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 19%;
+    padding: .5rem;
+    box-shadow: 4px 4px 4px 4px #cccc;  
+    border-radius: 10px;
+    background-color: #fff;
+    
+}
+
+
+
+.ProductCardImagem {
+    border-bottom: 1px solid #ccc;
+    
+}
+.ProductCardContainer img{
+    width: 180px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.ProductCardContainer button{
+    top: 50%;
+}

@@ -1,0 +1,34 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem .5rem 1.2rem 2rem;
+    background-color: #004299;
+    color: #fff;
+    box-shadow: 0 0 20px 0 #202020;
+}
+
+.inputSearch {
+ width: 50%;
+}
+
+.icons{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #2762bf; 
+    border: 3px solid #3a72d1;
+    cursor: pointer;
+}
+
+
+

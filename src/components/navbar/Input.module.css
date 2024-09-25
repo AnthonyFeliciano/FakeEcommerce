@@ -1,0 +1,18 @@
+.navSearch input{
+    width: 84%;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navSearch button{
+    padding: 5px 3px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1%;
+    width: 15%;
+    background-color: #2762bf; 
+    color: #fff;
+    cursor: pointer;
+}
+
