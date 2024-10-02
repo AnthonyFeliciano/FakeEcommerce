@@ -1,21 +1,85 @@
+import BtnCart from './BtnCart'
 import style from './ProductCart.module.css'
+import { FaStar } from "react-icons/fa6";
 
-function ProjectCard({product, addToCart}){
-    let submitCart = e => {
+function ProjectCard({product, addToCart, typeListProducts}){
+    const submitCart = e => {
         e.preventDefault()
         addToCart(product)
     }
 
+    const formatPrice = product => {
+        let formatProduct
+        
+         if(product.toString().indexOf('.') !== -1){
+             formatProduct = product.toString().replace('.', ',')     
+         } else {
+             formatProduct = product.toString() + ',00'
+         }
+
+         return formatProduct
+    }
+
     return (
-        <div className={style.ProductCardContainer}>
+        <>            
+        { typeListProducts==='productContainerBlock' ? 
+            
+                <div className={` ${style[typeListProducts]}`}>
+                <div className={style.stars}>
+                <span>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </span>
+            </div>
             <div className={style.ProductCardImagem}>
                 <img src={product.image} alt={product.title} />
             </div>
-            <h4>{product.title}</h4>
-            <p>{product.price}</p>
-            <button onClick={submitCart}>Add Cart</button>
+            <div className={style.cardInfo}>
+                <h4 className={style.title}>{product.title}</h4>
+                <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
+            </div>
+            <BtnCart click={submitCart} text="COMPRAR"/>
+            </div>
+            :
+            
+        <div className={`${style.ProductCardContainer} ${style[typeListProducts]}`}>
+
+            <div className={style.ProductCardImagem}>
+  
+                <img src={product.image} alt={product.title} />
+            </div>
+     
+
+            <div className={style.cardInfo}>
+            <div className={style.stars}>
+                <span>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </span>
+                </div>
+                <h4 className={style.title}>{product.title}</h4>
+                <div className={style.cardInfoPrice}>
+                    <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
+                    <BtnCart click={submitCart} text="COMPRAR"/>
+                </div>
+            </div>
+            
         </div>
+
+
+                
+        
+
+        }
+        </>
+
     )
 }
 
-export default ProjectCard
+export default ProjectCard 

@@ -1,16 +1,5 @@
-.navbar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2rem .5rem 1.2rem 2rem;
-    background-color: #004299;
-    color: #fff;
-    box-shadow: 0 0 20px 0 #202020;
-}
 
-.inputSearch {
- width: 50%;
-}
+
 
 .icons{
     width: 10%;
@@ -18,17 +7,188 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-}
+} 
 
 .icons button{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    color: #fff;
     background-color: #2762bf; 
     border: 3px solid #3a72d1;
     cursor: pointer;
 }
 
+.itensSmallNav{
+    margin-top: 1rem;
+}
 
 
+
+
+@media (max-width: 479px ) {
+    .nav{
+        display: flex ;
+        flex-direction: column ;
+        color: #fff ;
+        background-color: #004299 !important;
+        padding: 1rem ;
+    }
+    .navbarSmall{
+        display: flex ;
+        justify-content: space-between ;
+        align-items: center ;
+        flex-direction: row ;
+    }
+
+    .iconHamburguer svg{
+        font-size: 30px ;
+        color: #fff ;
+    }
+
+    .iconHamburguer{
+        display: flex ;
+        justify-content: center ;
+        align-items: center;
+        background: none;
+    }
+    
+    .iconHamburguer button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .icons svg{
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .inputSearch{
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px){
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background-color: #990073  !important;
+        padding: 1rem;
+    }
+    .navbarSmall{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .iconHamburguer svg{
+        font-size: 30px;
+        color: #fff;
+    }
+    .iconHamburguer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .iconHamburguer button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .icons svg{
+        color: #fff;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 991px)  and (min-width: 768px){
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background-color: #004299;
+        padding: 1rem;
+    }
+    .navbarSmall{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .iconHamburguer svg{
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .iconHamburguer{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .iconHamburguer button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .icons svg{
+        color: #fff;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background-color: #004299;
+        padding: 1rem;
+    }
+    .navbar{
+        display: none ;
+    }
+
+    .iconHamburguer {
+display: none;
+    }
+     
+    .icons svg{
+        color: #fff;
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background-color: #004299;
+        padding: 1rem;
+    }
+    .navbarLarge{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .iconHamburguer {
+        display: none;
+    } 
+    
+    .icons svg{
+        color: #fff;
+        font-size: 22px;
+    }
+}

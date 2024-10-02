@@ -12,7 +12,7 @@ function Select({name, text, handleSelectChangeCategories, categories = []}){
         <div>
             <label htmlFor={name}>{text}: </label>
             <select name={name} onChange={handleChange}>
-                <option value="">All</option>
+                <option value="">Todos</option>
                 
                  {categories.map((category, index)=> (
                     <option key={index} value={index}> {category}</option>

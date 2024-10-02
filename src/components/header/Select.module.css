@@ -1,8 +1,57 @@
 
 
-select{
+/* select{
     border: none;
     padding: 10px;
     width: 300px;
     border-radius: 5px;
+} */
+
+
+
+@media (max-width: 479px) {
+    select{
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    select{
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    select{
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1199px) {
+    select{
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    select{
+        border: none;
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+    } 
 }

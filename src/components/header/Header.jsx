@@ -5,9 +5,15 @@ import { FaList } from "react-icons/fa";
 import SelectCategories from './SelectCategories'
 import SelectOrdenar from './SelectOrdenar'
 
-function Header ({categories, handleSelectChangeCategories,handleSelectChangeOrdenar}){
+function Header ({categories, order, typeListProducts, handleSelectChangeCategories,handleSelectChangeOrdenar}){
+    
+    const typeList = e => {
+        let name = e.currentTarget.getAttribute('name')
+        order(name)
+    }
+    
     return(
-        <div className={style.headerContent}>
+        <div className={style.headerContent }>
             
             <div className={style.selects}>
                 <SelectCategories 
@@ -25,13 +31,11 @@ function Header ({categories, handleSelectChangeCategories,handleSelectChangeOrd
             <div className={style.IconsGridProduct}>
 
                 <div className={style.iconList}>
-                    <FaList/>
+                    <FaList className={typeListProducts === 'productContainerList' ? style.activeIcon : ''} name="productContainerList" onClick={typeList}/>
                 </div>
                 <div className={style.iconCard}>
-                    <IoGridOutline/>
+                    <IoGridOutline className={typeListProducts === 'productContainerBlock' ? style.activeIcon : ''} name="productContainerBlock" onClick={typeList}/>
                 </div>
-
-
             </div>
         </div>
 

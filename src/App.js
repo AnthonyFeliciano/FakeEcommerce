@@ -5,6 +5,7 @@ import CartList from './components/CartList'
 import Loading from './components/Loading'
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 function App() {
   const[products, setProducts] = useState([]);
@@ -14,9 +15,11 @@ function App() {
   const[categories, setCategories] = useState([])
   const[selectCategoria, setSelectCategoria] = useState('')
   const[sort, setSort] = useState('asc')
+  const[typeListProducts, setTypeListProducts] = useState('productContainerBlock')
+  const[showInfoHamburguer,setShowInfoHamburguer] = useState('')
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products', {
+    fetch(`https://fakestoreapi.com/products?sort=${sort}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -39,6 +42,7 @@ function App() {
     })
     .then((response) => response.json())
     .then((data) => {
+      
       setCategories(data)
     })
     .catch((error) => console.log(error))
@@ -55,8 +59,9 @@ function App() {
 
   const handleSelectChangeCategories = (value, index) => {
     setRemoveLoading(false)
+    
     if(index > 0) {
-      fetch(`https://fakestoreapi.com/products/category/${value}`,{
+      fetch(`https://fakestoreapi.com/products/category/${value}?sort=${sort}`,{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -73,7 +78,7 @@ function App() {
 
 
     else{
-      fetch(`https://fakestoreapi.com/products`,{
+      fetch(`https://fakestoreapi.com/products?sort=${sort}`,{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -113,17 +118,39 @@ function App() {
     })
   }
 
+  const order = value => {
+    setTypeListProducts(value)
+    
+  }
+
+  const clickShowInfoHamburguer = value => {
+    if(value === ''){
+      setShowInfoHamburguer('action')
+    } else {
+      setShowInfoHamburguer('')
+    }
+
+  }
+  
   return (
     <div className="App">
-        <Navbar acaoButtonCart={toggleSidebar}/>
+        <Navbar 
+          acaoButtonCart={toggleSidebar} 
+          clickShowInfoHamburguer={clickShowInfoHamburguer} 
+          showInfoHamburguer={showInfoHamburguer}
+        />
         <Header 
+          order={order}
+          typeListProducts={typeListProducts}
           categories={categories} 
           handleSelectChangeOrdenar={handleSelectChangeOrdenar}
           handleSelectChangeCategories={handleSelectChangeCategories}
         />
 
+        
+
       {products ? (
-        <ProductList products={products} addToCart={addToCart}/>
+        <ProductList typeListProducts={typeListProducts} products={products} addToCart={addToCart}/>
       ) :
       (<Loading/>)
     
@@ -133,8 +160,8 @@ function App() {
       
     
       <CartList toggleSidebar={toggleSidebar} carts={cart} isOpen={sideBarIsOpen}/>
+      <Footer/>
       
-    
     </div>
   );
 }

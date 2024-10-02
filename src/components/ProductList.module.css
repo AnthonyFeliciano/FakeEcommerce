@@ -1,10 +1,122 @@
-.ProductListContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 95%;
-    gap: 12px;
-    margin: 0 2.5rem;
-    
+.ProductListContainer {
+    display: flex; 
 }
+
+@media (max-width: 479px) {
+
+    .productContainerBlock{
+        flex-direction: row;
+        justify-content: center ;
+
+        gap: 12px;
+        flex-wrap: wrap;
+    
+    
+    }
+    
+    .productContainerList{
+        width: 90%;
+        flex-direction: column;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        margin: 0 .5rem 2.5rem .5rem;
+    
+    
+    }
+}
+
+ @media (max-width: 767px) {
+    .productContainerBlock{
+        flex-direction: row;
+        justify-content: center !important;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 0 2.5rem 0;
+    
+    
+    }
+    
+    .productContainerList{
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 .5rem 2.5rem .5rem;
+    
+    
+    }
+} 
+
+
+@media (max-width: 991px) {
+    .productContainerBlock{
+        flex-direction: row;
+        justify-content: end;
+
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 0 2.5rem 0;
+    
+    
+    }
+
+    .productContainerList{
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 .5rem 2.5rem .5rem;
+    
+    
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .productContainerBlock{
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 2.5rem 2.5rem 2.5rem;
+    
+    
+    }
+
+    .productContainerList{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 .5rem 2.5rem .5rem;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .productContainerBlock{
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 2.5rem 2.5rem 2.5rem;
+    
+    
+    }
+
+    .productContainerList{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem ;
+    
+    }
+}
+
+

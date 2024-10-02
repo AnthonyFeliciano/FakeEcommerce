@@ -10,6 +10,9 @@
     z-index: 10;
     transition: right 0.5s ease; 
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
   }
 
@@ -33,4 +36,8 @@
 
 .productsCart{
     margin: 2rem 0;
+}
+
+.totalCart{
+    background-color: red;
 }

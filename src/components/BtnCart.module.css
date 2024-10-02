@@ -1,0 +1,27 @@
+
+.btnCart{
+    width: 100%;
+}
+
+.btnCart button{
+    width: 100%;
+    padding: 8px;
+    background-color: #2762bf;
+    border: 2px solid #4a82e4;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btnCart button:hover{
+    background-color: #004299;
+    cursor: pointer;
+}
+
+.btnCart svg{
+    font-size: 25px;
+}

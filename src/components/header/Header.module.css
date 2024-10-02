@@ -1,24 +1,151 @@
-.headerContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2.5rem;
-}
-
-.selects {
-    display: flex;
-    gap: 20px;
-    width: 80%;
-}
-.IconsGridProduct{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 22px;
-    color: #5e5e5e;
-}
-
 .IconsGridProduct div:hover{
     color: #004299;
     cursor: pointer;
+}
+
+.activeIcon{
+    color: #004299;
+}
+
+
+
+@media (max-width: 479px) {
+    .headerContent{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.5rem 1;
+    }
+
+    .selects{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .IconsGridProduct{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        gap: 13px;
+        font-size: 22px;
+        color: #5e5e5e;
+    }
+
+
+}
+
+
+@media (max-width: 767px) {
+    .headerContent{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.5rem 1;
+    }
+
+    .selects{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .IconsGridProduct{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        gap: 13px;
+        font-size: 22px;
+        color: #5e5e5e;
+    }
+}
+
+@media (max-width: 991px) {
+    .headerContent{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.5rem;
+    }
+
+    .selects{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .IconsGridProduct{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        gap: 13px;
+        font-size: 22px;
+        color: #5e5e5e;
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .headerContent{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.5rem 1rem;
+    }
+
+    .selects{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .IconsGridProduct{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        gap: 13px;
+        font-size: 22px;
+        color: #5e5e5e;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .headerContent{
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.5rem 2.5rem;
+    }
+    
+    .selects {
+        display: flex;
+        gap: 20px;
+        width: 80%;
+    }
+    .IconsGridProduct{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font-size: 22px;
+        color: #5e5e5e;
+    }
+    
 }
