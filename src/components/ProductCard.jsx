@@ -20,6 +20,12 @@ function ProjectCard({product, addToCart, typeListProducts}){
          return formatProduct
     }
 
+    const titleSmall = title => {
+        let newName = title.slice(0,25)
+        newName += '...'
+        return newName
+    }
+
     return (
         <>            
         { typeListProducts==='productContainerBlock' ? 
@@ -38,7 +44,8 @@ function ProjectCard({product, addToCart, typeListProducts}){
                 <img src={product.image} alt={product.title} />
             </div>
             <div className={style.cardInfo}>
-                <h4 className={style.title}>{product.title}</h4>
+                <h4 className={style.titleLong}>{product.title}</h4>
+                <h4 className={style.titleSmall}>{titleSmall(product.title)}</h4>
                 <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
             </div>
             <BtnCart click={submitCart} text="COMPRAR"/>
@@ -63,7 +70,8 @@ function ProjectCard({product, addToCart, typeListProducts}){
                     <FaStar />
                 </span>
                 </div>
-                <h4 className={style.title}>{product.title}</h4>
+                <h4 className={style.titleLong}>{product.title}</h4>
+                <h4 className={style.titleSmall}>{titleSmall(product.title)}</h4>
                 <div className={style.cardInfoPrice}>
                     <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
                     <BtnCart click={submitCart} text="COMPRAR"/>

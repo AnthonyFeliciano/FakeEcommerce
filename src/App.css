@@ -9,4 +9,5 @@
 .App{
    background-color: #efefef;
    height: 100%;
+   min-width: 305px;
 } 

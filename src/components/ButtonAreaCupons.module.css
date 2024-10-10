@@ -1,0 +1,16 @@
+.buttonsAreaCupons{
+    width: 100px;
+    text-transform: uppercase;
+    background-color: #004299;
+    color: #fff;
+    font-size: 70%;
+    font-weight: bold;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.buttonsAreaCupons:hover{
+    transform: scale(1.1);
+    background-color: #002d75;
+}

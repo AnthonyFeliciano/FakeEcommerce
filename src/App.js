@@ -18,6 +18,7 @@ function App() {
   const[typeListProducts, setTypeListProducts] = useState('productContainerBlock')
   const[showInfoHamburguer,setShowInfoHamburguer] = useState('')
 
+
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products?sort=${sort}`, {
       method: 'GET',
@@ -48,10 +49,30 @@ function App() {
     .catch((error) => console.log(error))
   },[])
 
+
   const addToCart = (product) => {
-    setCart([...cart, product]);
-      setSideBarIsOpen(true)
+    const existeNoCarrinho = cart.some(item => item.id === product.id);
+
+    if(existeNoCarrinho){
+      const atualizaValor = cart.map(item => {
+        if(item.id === product.id){
+          return {...item, price: item.price + item.price}
+        }
+        else{
+          return item
+        }
+      })
+      setCart(atualizaValor);
+    }
+
+    else{
+      setCart([...cart, product]);
+    }
+
+    setSideBarIsOpen(true);
+
   };
+  console.log(cart)
 
   const toggleSidebar = () => {
     setSideBarIsOpen(!sideBarIsOpen)

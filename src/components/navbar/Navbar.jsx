@@ -18,21 +18,42 @@ function Navbar({ acaoButtonCart, clickShowInfoHamburguer, showInfoHamburguer })
     return (
         <nav className={style.nav}>
             <div className={style.navbarSmall}>
-                <div className={style.iconHamburguer}>
-                    <button onClick={showInfo}><GiHamburgerMenu /></button>
+                <div className={style.row}>
+                    <div className={style.iconHamburguer}>
+                        <button onClick={showInfo}><GiHamburgerMenu /></button>
+                    </div>
+                    <h1>E-Commerce</h1>
+                    <div className={style.icons}>
+                        <button onClick={toggleSidebar}><FaShoppingCart /></button>
+                    </div>
                 </div>
-                <h1>E-Commerce</h1>
-                <div className={style.icons}>
-                    <button onClick={toggleSidebar}><FaShoppingCart /></button>
+
+                <div className={style.row}>
+                    <div className={style.inputSearch}>
+                        <Input type="text" name="input-search" placeholder="Pesquisar Produto" />
+                    </div>
                 </div>
             </div>
 
-            <div className={style.inputSearch}>
-                <Input type="text" name="input-search" placeholder="Pesquisar Produto" />
-            </div> 
+
+           
+            <div className={style.navbarLarge}>
+                <div className={style.row}>
+                    {/* <div className={style.iconHamburguer}>
+                        <button onClick={showInfo}><GiHamburgerMenu /></button>
+                    </div> */}
+                    <h1>E-Commerce</h1>
+                    <div className={style.inputSearch}>
+                        <Input type="text" name="input-search" placeholder="Pesquisar Produto" />
+                    </div> 
+                    <div className={style.icons}>
+                        <button onClick={toggleSidebar}><FaShoppingCart /></button>
+                        <button><FaUserAlt /></button>
+                    </div>
+                </div>
+            </div>
 
 
-            
             {showInfoHamburguer === 'action' ?
                 <div className={style.itensSmallNav}>
 

@@ -1,0 +1,25 @@
+.inputCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 60%;
+}
+
+.inputCart input{
+    border: none;
+    border-bottom: 1px solid #004299;
+    background-color: transparent;
+    outline: none;
+    color: #5e5e5e;
+    font-weight: bold;
+    font-size: 90%;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.inputCart input::placeholder{
+    text-transform:uppercase;
+    color: #a7a7a7;
+    font-weight: bold;
+    font-size: 75%;
+}
