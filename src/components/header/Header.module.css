@@ -2,13 +2,9 @@
     color: #004299;
     cursor: pointer;
 }
-
 .activeIcon{
     color: #004299;
 }
-
-
-
 @media (max-width: 479px) {
     .headerContent{
         display: flex;
@@ -16,16 +12,14 @@
         gap:15px;
         justify-content: space-between;
         align-items: center;
-        margin: 2.5rem 1;
+        margin: 2rem 1rem;
     }
-
     .selects{
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
-
     .IconsGridProduct{
         width: 100%;
         display: flex;
@@ -35,19 +29,15 @@
         font-size: 22px;
         color: #5e5e5e;
     }
-
-
 }
-
-
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 480px){
     .headerContent{
         display: flex;
         flex-direction: column;
         gap:15px;
         justify-content: space-between;
         align-items: center;
-        margin: 2.5rem 1;
+        margin: 2rem 1rem;
     }
 
     .selects{
@@ -67,8 +57,7 @@
         color: #5e5e5e;
     }
 }
-
-@media (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 768px){
     .headerContent{
         display: flex;
         flex-direction: column;
@@ -77,14 +66,12 @@
         align-items: center;
         margin: 2.5rem;
     }
-
     .selects{
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
-
     .IconsGridProduct{
         width: 100%;
         display: flex;
@@ -94,10 +81,8 @@
         font-size: 22px;
         color: #5e5e5e;
     }
-
 }
-
-@media (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 992px) {
     .headerContent{
         display: flex;
         flex-direction: column;
@@ -106,14 +91,12 @@
         align-items: center;
         margin: 2.5rem 1rem;
     }
-
     .selects{
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
-
     .IconsGridProduct{
         width: 100%;
         display: flex;
@@ -123,18 +106,15 @@
         font-size: 22px;
         color: #5e5e5e;
     }
-
 }
-
 @media (min-width: 1200px) {
     .headerContent{
         display: flex;
         gap: 15px;
         justify-content: space-between;
         align-items: center;
-        margin: 2.5rem 2.5rem;
+        margin: 2.5rem;
     }
-    
     .selects {
         display: flex;
         gap: 20px;
@@ -147,5 +127,4 @@
         font-size: 22px;
         color: #5e5e5e;
     }
-    
 }

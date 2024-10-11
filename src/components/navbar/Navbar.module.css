@@ -1,15 +1,12 @@
-
-
-
 .icons{
     width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-} 
-
+}
 .icons button{
+    min-width: 40px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -17,14 +14,9 @@
     border: 3px solid #3a72d1;
     cursor: pointer;
 }
-
 .itensSmallNav{
     margin-top: 1rem;
 }
-
-
-
-
 @media (max-width: 479px ) {
     .nav{
         display: flex ;
@@ -38,49 +30,38 @@
         flex-direction: column ;
         gap:10px
     }
-
     .navbarSmall .row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
     }
-
     .navbarSmall .row .inputSearch{
         width: 100%;
     }
-
     .navbarLarge{
         display: none;
     }
-
     .iconHamburguer svg{
         font-size: 30px ;
         color: #fff ;
     }
-
     .iconHamburguer{
         display: flex ;
         justify-content: center ;
         align-items: center;
         background: none;
     }
-    
     .iconHamburguer button{
         background: none;
         border: none;
         cursor: pointer;
     }
-    
     .icons svg{
         color: #fff;
         font-size: 22px;
     }
-
 }
-
 @media (max-width: 767px) and (min-width: 480px){
-
     .nav{
         display: flex;
         flex-direction: column;
@@ -93,22 +74,17 @@
         gap:10px;
         flex-direction: column ;
     }
-
     .navbarSmall .row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
     }
-
     .navbarSmall .row .inputSearch{
         width: 100%;
     }
-
     .navbarLarge{
         display: none;
     }
-
     .iconHamburguer svg{
         font-size: 30px;
         color: #fff;
@@ -118,21 +94,17 @@
         justify-content: center;
         align-items: center;
     }
-    
     .iconHamburguer button{
         background: none;
         border: none;
         cursor: pointer;
     }
-    
     .icons svg{
         color: #fff;
         font-size: 22px;
     }
 }
-
 @media (max-width: 991px)  and (min-width: 768px){
-
     .nav{
         display: flex;
         flex-direction: column;
@@ -145,48 +117,39 @@
         flex-direction: column ;
         gap:10px
     }
-
     .navbarSmall .row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .navbarSmall .row .inputSearch{
         width: 100%;
     }
-
     .navbarLarge{
         display: none;
     }
-
     .itensSmallNav{
         display: none;
     }
-
     .iconHamburguer svg{
         font-size: 30px;
         color: #fff;
     }
-
     .iconHamburguer{
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
     .iconHamburguer button{
         background: none;
         border: none;
         cursor: pointer;
     }
-    
     .icons svg{
         color: #fff;
         font-size: 22px;
     }
 }
-
 @media (max-width: 1199px) and (min-width: 992px) {
     .nav{
         display: flex;
@@ -198,12 +161,10 @@
     .navbarSmall{
         display: none;
     }
-
     .navbarLarge{
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        
+        justify-content: center; 
     }
     .navbarLarge .row{
         display: flex;
@@ -212,25 +173,20 @@
         align-items: center;
         width: 100%;
     }
-
     .navbarLarge .row .inputSearch{
         width: 55%;
     }
     .itensSmallNav{
         display: none;
     }
-
     .iconHamburguer {
         display: none;
     }
-     
     .icons svg{
         color: #fff;
         font-size: 22px;
     }
-
 }
-
 @media (min-width: 1200px) {
     .nav{
         display: flex;
@@ -243,12 +199,10 @@
     .navbarSmall{
         display: none;
     }
-
     .navbarLarge{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        
     }
     .navbarLarge .row{
         display: flex;
@@ -257,19 +211,15 @@
         align-items: center;
         width: 100%;
     }
-
     .navbarLarge .row .inputSearch{
         width: 55%;
     }
-
     .itensSmallNav{
         display: none;
     }
-
     .iconHamburguer {
         display: none;
-    } 
-    
+    }
     .icons svg{
         color: #fff;
         font-size: 22px;

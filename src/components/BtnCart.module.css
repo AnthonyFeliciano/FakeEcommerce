@@ -6,8 +6,8 @@
 .btnCart button{
     width: 100%;
     padding: 8px;
-    background-color: #2762bf;
-    border: 2px solid #4a82e4;
+    background-color: #004299;
+    border: 2px solid #023383;
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
@@ -18,7 +18,7 @@
 }
 
 .btnCart button:hover{
-    background-color: #004299;
+    background-color: #023383;
     cursor: pointer;
 }
 

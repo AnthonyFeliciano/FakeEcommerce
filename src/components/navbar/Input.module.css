@@ -3,11 +3,12 @@
 }
 
 .navSearch input{
-    /* width: 84%; */
     width: 100%;
     border: none;
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
+    outline: none;
+
 }
 
 .navSearch button{
@@ -15,7 +16,6 @@
     border-radius: 5px;
     border: none;
     margin-left: 1%;
-    /* width: 15%; */
     width: 120px;
     background-color: #2762bf; 
     color: #fff;

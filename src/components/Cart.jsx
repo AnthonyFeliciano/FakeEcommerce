@@ -1,57 +1,46 @@
-import style from './Cart.module.css'
-import {useState} from 'react';
-function Cart ({cart}) {
+import React from 'react';
+import style from './Cart.module.css';
 
-
- const [quantidadeItens, setQuantidadeItens] = useState(1)
-
-
-    let price = () => {
-        const precoIncial = cart.price
-        let valorTotal = precoIncial * quantidadeItens
-        valorTotal = valorTotal.toLocaleString('pt-BR',  { 
+function Cart({ item, updateQuantity }) {
+    const formatarValor = (valor) => {
+        return valor.toLocaleString('pt-BR', { 
+            style: 'currency',
+            currency: 'BRL',
             minimumFractionDigits: 2, 
             maximumFractionDigits: 2 
-          });
+        });
+    };
 
-        return valorTotal
-    } 
+    const calcularPrecoTotal = () => {
+        return item.price * item.quantity;
+    };
 
+    const handleQuantityChange = (change) => {
+        const newQuantity = item.quantity + change;
+        if (newQuantity >= 1 && newQuantity <= 25) {
+            updateQuantity(item.id, newQuantity);
+        }
+    };
 
-
- const addQuantidadeItens = id => {
-    if(id === cart.id && quantidadeItens < 25){
-         let qtd = quantidadeItens
-         setQuantidadeItens (qtd += 1)
-         
-         
-     }
-     else return
- }  
- const removeQuantidadeItens = id => {
-     if(id === cart.id && quantidadeItens> 0){
-         let qtd = quantidadeItens
-         setQuantidadeItens (qtd -= 1)
-     }
-     else return
- }
     return (
         <div className={style.cartContainer}>
-            <div className={style.cartImagem} >
-                <img src={cart.image} alt="" />
+            <div className={style.cartImagem}>
+                <img src={item.image} alt={item.title} />
             </div>
             <div className={style.CartContent}>
-                <p>{cart.title}</p>
-                <p>{price()}</p>
+                <p>{item.title}</p>
+                <p>{formatarValor(calcularPrecoTotal())}</p>
                 <div className={style.cartBtn}>
-                    <button onClick={() =>  addQuantidadeItens(cart.id)}> + </button>
-                    <p>{quantidadeItens}</p>
-                    <button onClick={() => removeQuantidadeItens(cart.id)}> - </button>
+                    <button onClick={() => handleQuantityChange(-1)} disabled={item.quantity <= 1}> - </button>
+                    <p>{item.quantity}</p>
+                    <button onClick={() => handleQuantityChange(1)} disabled={item.quantity >= 25}> + </button>
                 </div>
             </div>
+            <div>
+                <button>Remover</button>
+            </div>
         </div>
-    )
-
+    );
 }
 
-export default Cart
+export default Cart;

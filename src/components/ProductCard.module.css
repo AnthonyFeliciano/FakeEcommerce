@@ -3,14 +3,12 @@
     font-weight: bold;
 }
 .stars svg{
-    color: rgb(255, 101, 0)
+    color: #025ee9;
 }
 .productContainerBlock:hover{
-    transform: scale(1.1);
     cursor:pointer;
 }
 .productContainerList:hover{
-    transform: scale(1.1);
     cursor:pointer;
 }
 @media (max-width: 479px) {

@@ -1,51 +1,64 @@
 
 
-/* select{
-    border: none;
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-} */
-
-
-
+label{
+    color: #767b80;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+select option {
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: #4e555c;
+}
 @media (max-width: 479px) {
     select{
         border: none;
         padding: 10px;
         width: 100%;
         border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #666666;
+        outline: none;
     }
 }
-
-
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 480px){
     select{
         border: none;
         padding: 10px;
         width: 100%;
         border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #666666;
+        outline: none;
     }
 }
-
-@media (max-width: 991px) {
+@media (max-width: 991px)  and (min-width: 768px){
     select{
         border: none;
         padding: 10px;
         width: 100%;
         border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #666666;
+        outline: none;
     }
 }
-
-@media (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 992px) {
     select{
         border: none;
         padding: 10px;
         width: 100%;
         border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #666666;
+        outline: none;
     }
 }
-
 @media (min-width: 1200px) {
 
     select{
@@ -53,5 +66,9 @@
         padding: 10px;
         width: 300px;
         border-radius: 5px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #666666;
+        outline: none;
     } 
 }
