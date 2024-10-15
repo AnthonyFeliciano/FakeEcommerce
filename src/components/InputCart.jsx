@@ -27,8 +27,7 @@ function InputCart({ textBtn, placeholder, name, id }) {
     };
 
     const submitInput = () => {
-        console.log('nome do input: ' + name)
-        console.log('valor:' + value)
+
     }
 
     return (
