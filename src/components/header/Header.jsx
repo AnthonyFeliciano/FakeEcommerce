@@ -5,7 +5,7 @@ import { FaList } from "react-icons/fa";
 import SelectCategories from './SelectCategories'
 import SelectOrdenar from './SelectOrdenar'
 
-function Header ({categories, order, typeListProducts, handleSelectChangeCategories,handleSelectChangeOrdenar}){
+function Header ({categories, order, typeListProducts, handleSelectChangeCategories, handleSelectChangeOrdenar, resultadoPesquisa}){
     
     const typeList = e => {
         let name = e.currentTarget.getAttribute('name')
@@ -14,7 +14,6 @@ function Header ({categories, order, typeListProducts, handleSelectChangeCategor
     
     return(
         <div className={style.headerContent }>
-            
             <div className={style.selects}>
                 <SelectCategories 
                     name="categoria" 

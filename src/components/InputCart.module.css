@@ -16,10 +16,23 @@
     text-transform: uppercase;
     width: 100%;
 }
+ 
 
-.inputCart input::placeholder{
-    text-transform:uppercase;
-    color: #a7a7a7;
-    font-weight: bold;
-    font-size: 75%;
+
+@media (max-width: 600px) {
+    .inputCart input::placeholder{
+        text-transform:uppercase;
+        color: #a7a7a7;
+        font-weight: bold;
+        font-size: 65.5%;
+    }
+}
+
+@media (min-width: 601px) {
+    .inputCart input::placeholder{
+        text-transform:uppercase;
+        color: #a7a7a7;
+        font-weight: bold;
+        font-size: 75%;
+    }
 }

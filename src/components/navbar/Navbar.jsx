@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 
-function Navbar({ acaoButtonCart, clickShowInfoHamburguer, showInfoHamburguer }) {
+function Navbar({ acaoButtonCart, clickShowInfoHamburguer, showInfoHamburguer, buscarItem, countCart, valorInputBuscarItem}) {
 
     const toggleSidebar = () => {
         acaoButtonCart()
@@ -24,13 +24,20 @@ function Navbar({ acaoButtonCart, clickShowInfoHamburguer, showInfoHamburguer })
                     </div>
                     <h1>E-Commerce</h1>
                     <div className={style.icons}>
-                        <button onClick={toggleSidebar}><FaShoppingCart /></button>
+                        <button onClick={toggleSidebar}><FaShoppingCart />{countCart ?
+                            (<span className={style.countCart}>{countCart}</span>) : ''}</button>
                     </div>
                 </div>
 
                 <div className={style.row}>
                     <div className={style.inputSearch}>
-                        <Input type="text" name="input-search" placeholder="Pesquisar Produto" />
+                        <Input 
+                            type="text" 
+                            name="input-search" 
+                            placeholder="Pesquisar Produto" 
+                            buscarItem={buscarItem}
+                            valorInputBuscarItem={valorInputBuscarItem}
+                        />
                     </div>
                 </div>
             </div>
@@ -39,10 +46,19 @@ function Navbar({ acaoButtonCart, clickShowInfoHamburguer, showInfoHamburguer })
                 <div className={style.row}>
                     <h1>E-Commerce</h1>
                     <div className={style.inputSearch}>
-                        <Input type="text" name="input-search" placeholder="Pesquisar Produto" />
+                        <Input 
+                            type="text" name="input-search" 
+                            placeholder="Pesquisar Produto" 
+                            buscarItem={buscarItem}
+                            valorInputBuscarItem={valorInputBuscarItem}
+                        />
+                        
                     </div>
                     <div className={style.icons}>
-                        <button onClick={toggleSidebar}><FaShoppingCart /></button>
+                        <button onClick={toggleSidebar}><FaShoppingCart />
+                        {countCart ?
+                            (<span className={style.countCart}>{countCart}</span>) : ''}
+                        </button>
                         <button><FaUserAlt /></button>
                     </div>
                 </div>

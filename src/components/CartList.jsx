@@ -5,7 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { PiToteSimpleFill } from "react-icons/pi";
 import InputCart from './InputCart';
 
-function CartList({ toggleSidebar, cart, isOpen, updateCartItemQuantity }) {
+function CartList({ toggleSidebar, cart, isOpen, updateCartItemQuantity, removeCartItem }) {
     const calcularSubtotal = () => {
         return cart.reduce((total, item) => total + item.price * item.quantity, 0);
     };
@@ -29,13 +29,21 @@ function CartList({ toggleSidebar, cart, isOpen, updateCartItemQuantity }) {
                     </div>
                 </div>
                 <div className={style.productsCart}>
-                    {cart.map((item) => (
-                        <Cart 
-                            key={item.id} 
-                            item={item} 
-                            updateQuantity={updateCartItemQuantity}
-                        />
-                    ))}
+                     { cart.length > 0 
+                     ? 
+                        cart.map((item) => (
+                            <Cart 
+                                key={item.id} 
+                                item={item} 
+                                updateQuantity={updateCartItemQuantity}
+                                removeItem={removeCartItem}
+                            />
+                        ))
+                     :
+                     <div className={style.carrinhoVazio}>
+                        Seu carrinho esta vazio ;(
+                    </div>
+                }
                 </div>
             </div>
             <div className={style.totalCart}>
@@ -43,15 +51,28 @@ function CartList({ toggleSidebar, cart, isOpen, updateCartItemQuantity }) {
                     <div className={style.cupons}>
                         <p>
                             <span>Cupom de desconto</span> 
-                            <InputCart textBtn='Adicionar' placeholder='Insira o desconto' name='desconto'/>
+                            <InputCart 
+                                textBtn='Adicionar' 
+                                placeholder='Insira o desconto' 
+                                name='desconto'
+                                id='desconto'
+                                />
                         </p>
+                        
                         <p>
                             <span>Calcular Frete</span> 
-                            <InputCart textBtn='Calcular' placeholder='Digite o CEP' name='cep'/>
+                            <InputCart 
+                                textBtn='Calcular' 
+                                placeholder='Digite o CEP' 
+                                name='cep'
+                                id='cep'
+                            />
                         </p>
                     </div>
                     <div className={style.totalEntrega}>
                         <p><span>Subtotal</span> {formatarValor(calcularSubtotal())}</p> 
+                        <p><span>Entrega</span> GRÁTIS</p> 
+                        <p><span>Total</span> {formatarValor(calcularSubtotal())}</p> 
                     </div>
                 </div>
                 <div className={style.action}>
@@ -67,5 +88,4 @@ function CartList({ toggleSidebar, cart, isOpen, updateCartItemQuantity }) {
         </div>
     );
 }
-
 export default CartList;

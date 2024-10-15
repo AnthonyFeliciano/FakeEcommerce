@@ -8,17 +8,14 @@ function ProjectCard({ product, addToCart, typeListProducts }) {
         addToCart(product)
     }
 
-    const formatPrice = product => {
-        let formatProduct
-
-        if (product.toString().indexOf('.') !== -1) {
-            formatProduct = product.toString().replace('.', ',')
-        } else {
-            formatProduct = product.toString() + ',00'
-        }
-
-        return formatProduct
-    }
+    const formatarValor = valor => {
+        return valor.toLocaleString('pt-BR', { 
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2, 
+            maximumFractionDigits: 2 
+        });
+    };
 
     const titleSmall = title => {
         let newName = title.slice(0, 25)
@@ -47,7 +44,7 @@ function ProjectCard({ product, addToCart, typeListProducts }) {
                     <div className={style.cardInfo}>
                         <h4 className={style.titleLong}>{product.title}</h4>
                         <h4 className={style.titleSmall}>{titleSmall(product.title)}</h4>
-                        <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
+                        <h2 className={style.price}>{formatarValor(product.price)}</h2>
                     </div>
                     <BtnCart click={submitCart} text="COMPRAR" />
                 </div>
@@ -74,7 +71,7 @@ function ProjectCard({ product, addToCart, typeListProducts }) {
                         <h4 className={style.titleLong}>{product.title}</h4>
                         <h4 className={style.titleSmall}>{titleSmall(product.title)}</h4>
                         <div className={style.cardInfoPrice}>
-                            <h2 className={style.price}>R$ {formatPrice(product.price)}</h2>
+                            <h2 className={style.price}>{formatarValor(product.price)}</h2>
                             <BtnCart click={submitCart} text="COMPRAR" />
                         </div>
                     </div>

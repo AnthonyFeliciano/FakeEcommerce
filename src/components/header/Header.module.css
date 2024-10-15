@@ -5,6 +5,8 @@
 .activeIcon{
     color: #004299;
 }
+
+
 @media (max-width: 479px) {
     .headerContent{
         display: flex;
@@ -13,6 +15,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 2rem 1rem;
+        
     }
     .selects{
         display: flex;

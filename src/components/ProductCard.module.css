@@ -21,7 +21,7 @@
         align-items: center;
         gap: 10px;
         padding: .5rem;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
     }
@@ -54,7 +54,7 @@
     .productContainerList{
         display: flex;
         align-items: top;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
         width: 95%;
@@ -100,7 +100,7 @@
         align-items: center;
         gap: 10px;
         padding: .5rem;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2; 
         border-radius: 10px;
         background-color: #fff;
     }
@@ -140,7 +140,7 @@
     .productContainerList{
         display: flex;
         align-items: top;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2; 
         border-radius: 10px;
         background-color: #fff;
         width: 95%;
@@ -186,7 +186,7 @@
         align-items: center;
         gap: 10px;
         padding: .5rem;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2; 
         border-radius: 10px;
         background-color: #fff;
     }
@@ -219,7 +219,7 @@
     .productContainerList{
         display: flex;
         align-items: top;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
         width: 95%;
@@ -265,7 +265,7 @@
         align-items: center;
         gap: 10px;
         padding: .5rem;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
     }
@@ -298,7 +298,7 @@
     .productContainerList{
         display: flex;
         align-items: top;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
         width: 95%;
@@ -345,7 +345,7 @@
         align-items: center;
         gap: 10px;
         padding: .5rem;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
     }
@@ -379,7 +379,7 @@
         display: flex;
         justify-content: center;
         align-items: top;
-        box-shadow: 4px 4px 4px 4px #cccc;  
+        border: 2px solid #DDDFE2;
         border-radius: 10px;
         background-color: #fff;
         width: 75%;

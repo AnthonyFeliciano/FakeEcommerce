@@ -8,6 +8,7 @@
         justify-content: center ;
         gap: 12px;
         flex-wrap: wrap;
+        margin-bottom: 2.5rem;
     }
     .productContainerList{
         width: 100%;
@@ -17,6 +18,18 @@
         gap: 12px;
         flex-wrap: wrap;
         margin-bottom: 2.5rem;
+    }
+    .noResult{
+        width: 90%;
+        height: 48vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100%;
+        text-align: center;
+        color: #767b80;
+        font-weight: 1000;
+        text-transform: uppercase;
     }
 }
 @media (max-width: 767px) and (min-width: 480px){
@@ -35,6 +48,17 @@
         justify-content: center;
         margin-bottom: 2.5rem;
     }
+    .noResult{
+        width: 80%;
+        height: 32vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100%;
+        color: #767b80;
+        font-weight: 1000;
+        text-transform: uppercase;
+    }
 } 
 @media (max-width: 991px)  and (min-width: 768px){
     .productContainerBlock{
@@ -51,6 +75,17 @@
         gap: 12px;
         flex-wrap: wrap;
         margin-bottom: 2.5rem;
+    }
+    .noResult{
+        width: 100%;
+        height: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 130%;
+        color: #767b80;
+        font-weight: 1000;
+        text-transform: uppercase;
     }
 }
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -69,6 +104,17 @@
         gap: 12px;
         flex-wrap: wrap;
         margin-bottom: 2.5rem;
+    }
+    .noResult{
+        width: 100%;
+        height: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 130%;
+        color: #767b80;
+        font-weight: 1000;
+        text-transform: uppercase;
     }
 }
 @media (min-width: 1200px) {
@@ -89,6 +135,17 @@
         flex-wrap: wrap;
         margin-bottom: 2.5rem ;
     
+    }
+    .noResult{
+        width: 100%;
+        height: 28vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 130%;
+        color: #767b80;
+        font-weight: 1000;
+        text-transform: uppercase;
     }
 }
 

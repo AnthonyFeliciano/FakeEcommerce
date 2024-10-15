@@ -17,6 +17,18 @@
 .itensSmallNav{
     margin-top: 1rem;
 }
+
+button .countCart{
+    color: #004299;
+    font-weight: 1000;
+    background-color: #e7edf8;
+    font-size: 14px;
+    position: absolute;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
 @media (max-width: 479px ) {
     .nav{
         display: flex ;
@@ -128,9 +140,7 @@
     .navbarLarge{
         display: none;
     }
-    .itensSmallNav{
-        display: none;
-    }
+
     .iconHamburguer svg{
         font-size: 30px;
         color: #fff;

@@ -1,21 +1,15 @@
-.cartContainer {
-    width: 450px;
-    background-color: #efefef;
-    height: 100%;
-    position: fixed;
-    padding: 0 20px;
-    top: 0;
-    right: -500px; 
-    z-index: 10;
-    transition: right 0.5s ease; 
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 5px 5px 5px 5px #000;
-}
 .cartContainer.open {
     right: 0; 
+}
+
+.carrinhoVazio{
+    color: #0255c0;
+    font-weight: bold;
+    text-shadow: .5px .5px  #01377e;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .titleCart {
     display: flex;
@@ -94,12 +88,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.cupons p span{
-    font-size: 70%;
-    text-transform: uppercase;
-    color: #646363;
-    font-weight: bold;
-}
+
 .totalEntrega{
     display: flex;
     flex-direction: column;
@@ -117,4 +106,80 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .cartContainer {
+        width: 100%;
+        min-width: 330px;
+        background-color:  #efefef;
+        height: 100%;
+        position: fixed;
+        padding: 0 20px;
+        top: 0;
+        right: -1000px; 
+        z-index: 10;
+        transition: right 0.5s ease; 
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 5px 5px 5px 5px #000;
+    }
+
+    .cupons p span{
+        font-size: 61.5%;
+        text-transform: uppercase;
+        color: #646363;
+        font-weight: bold;
+    }
+
+}
+@media (max-width: 800px) and (min-width: 601px){
+    .cartContainer {
+        width: 380px;
+        background-color:  #efefef;
+        height: 100%;
+        position: fixed;
+        padding: 0 20px;
+        top: 0;
+        right: -430px; 
+        z-index: 10;
+        transition: right 0.5s ease; 
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 5px 5px 5px 5px #000;
+    }
+    .cupons p span{
+        font-size: 70%;
+        text-transform: uppercase;
+        color: #646363;
+        font-weight: bold;
+    }
+}
+@media (min-width: 801px) {
+    .cartContainer {
+        width: 450px;
+        background-color: #efefef;
+        height: 100%;
+        position: fixed;
+        padding: 0 20px;
+        top: 0;
+        right: -600px; 
+        z-index: 10;
+        transition: right 0.5s ease; 
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 5px 5px 5px 5px #000;
+    }
+    .cupons p span{
+        font-size: 70%;
+        text-transform: uppercase;
+        color: #646363;
+        font-weight: bold;
+    }
 }

@@ -1,14 +1,32 @@
-import style from './Input.module.css'
-import { FaSearch } from "react-icons/fa";
+import style from './Input.module.css';
+import { IoMdClose } from "react-icons/io";
+
+function Input({ type, name, placeholder, buscarItem, valorInputBuscarItem = ''}) {
 
 
-function Input({type, name, placeholder}){
+    const handleChange = e => {
+        const value = e.target.value;
+        buscarItem(value);
+    }
+
+    const limparPesquisa = () => {
+        buscarItem('');
+    }
+
     return (
         <div className={style.navSearch}>
-            <input type={type} name={name} placeholder={placeholder} />
-            <button><FaSearch /> Search</button>
+            <input 
+                type={type} 
+                name={name} 
+                placeholder={placeholder} 
+                value={valorInputBuscarItem}
+                onChange={handleChange} 
+            />
+            <button onClick={limparPesquisa}>
+                <IoMdClose />
+            </button>
         </div>
     )
 }
 
-export default Input
+export default Input;
